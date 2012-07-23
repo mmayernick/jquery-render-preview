@@ -61,6 +61,6 @@ jQuery Render Preview takes several options.
 Changelog
 ---------
 
-0.1
-^^^
-* Relase
+### 0.1
+
+* Release

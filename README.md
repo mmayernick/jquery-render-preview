@@ -5,6 +5,11 @@ the contents of a `textarea`. jQuery Render Preview supports custom HTML tag whi
 new line formats, paragraph formats. Additionally, jQuery Render Preview supports custom filter
 callbacks to support additional formatting filters, like Markdown, or your own.
 
+Demo
+----
+
+See a demo [here](http://mmayernick.github.com/jquery-render-preview/demo/)
+
 Basic Setup
 -----------
 To get started you need to put [jQuery](http://jquery.com/),

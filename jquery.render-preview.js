@@ -4,7 +4,7 @@
  * Copyright (c) 2012 Michael Mayernick
  * http://github.com/mmayernick/jquery-render-preview
  *
- * Version : 0.0.1
+ * Version : 0.1
  * Released: 23 July, 2012
  *
  * Licensed under the MIT and GPL licenses:
@@ -21,9 +21,9 @@
     this.$target 	= $(target);
 
     this.defaults = {
-    	paragraphRegExp: 	new RegExp("(.*)\n\n([^#*\n\n].*)", "g"),
-      lineBreakRegExp: 	new RegExp("(.*)\n([^#*\n].*)", "g"),
-      allowedTags: 			['a', 'b', 'img', 'strong', 'blockquote', 'p', 'i', 'em', 'u', 'strike', 'super', 'sub', 'code', 'span']
+      paragraphRegExp:     new RegExp("(.*)\n\n([^#*\n\n].*)", "g"),
+      lineBreakRegExp:     new RegExp("(.*)\n([^#*\n].*)", "g"),
+      allowedTags:         ['a', 'b', 'img', 'strong', 'blockquote', 'p', 'i', 'em', 'u', 'strike', 'super', 'sub', 'code', 'span']
     };
 
     this.opts = $.extend(this.defaults, opts);
@@ -33,9 +33,9 @@
   }
 
   RenderPreview.prototype.init = function() {
-  	var self = this
+    var self = this
 
-  	self.$el.live('input propertychange', function(e) {
+    self.$el.live('input propertychange', function(e) {
       var text = self.sanatize($(this).val());
       $(self.$target).html(text);
     });

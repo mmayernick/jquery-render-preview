@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+    <script src="../jquery.render-preview.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="common/css/bootstrap.min.css">
+    <title>jQuery Render Preview</title>
+    <style>
+      body {
+        background:#fff url(common/img/grid-18px-masked.png) repeat-x top left;
+      }
+      #preview-form {
+        position: relative;
+        margin: 0 0 0 150px;
+        padding-top:35px;
+        width: 540px;
+      }
+      #preview {
+        position: relative;
+        margin-top:10px;
+        width: 520px;
+        min-height: 30px;
+        padding: 10px;
+        border: 1px dashed #999999;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+      }
+      .section { padding-top:20px; }
+
+    </style>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="index.html">jQuery Render Preview</a>
+          <ul class="nav">
+            <li><a href="#demo">Demo</a></li>
+            <li><a href="#started">Getting Started</a></li>
+            <li><a href="#options">Options</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="hero-unit">
+          <h1> jQuery Render Preview</h1>
+          <p>
+            <a href="https://github.com/mmayernick/jquery-render-preview">jQuery Render Preview</a> is a plugin that displays a sanatized, HTML formatted, live preview of the contents of a textarea or input. jQuery Render Preview supports custom HTML tag white lists, new line formats, paragraph formats and custom filters.
+            <div class="clearfix"></div>
+          </p>
+
+          <a name="demo"></a>
+          <form id="preview-form" name="demo" class="form-vertical" method="post" action=".">
+            <fieldset>
+              <span class="help-block">Start typing to see the preview. Allowed tags are 'a', 'b', 'img', 'strong', 'blockquote', 'p', 'i', 'em', 'u', 'strike', 'super', 'sub', 'code', 'span'.</span>
+              <div class="clearfix"></div>
+              <textarea class="input-xxlarge" id="source" /></textarea>
+            </fieldset>
+            <div id="preview"></div>
+          </form>
+
+
+        </div>
+        <div class="span12 columns">
+
+
+          <p>jQuery Render Preview is a plugin that displays a sanatized, HTML formatted, live preview of the contents of a `textarea`. jQuery Render Preview supports custom HTML tag white lists, new line formats, paragraph formats. Additionally, jQuery Render Preview supports custom filter callbacks to support additional formatting filters, like Markdown, or your own.</p>
+
+
+<div class="section" id="basic-setup">
+  <a name="started"></a>
+  <h1>Basic Setup</h1>
+  <p>To get started you need to put <a class="reference external" href="http://jquery.com/">jQuery</a>,
+<a class="reference external" href="https://github.com/mmayernick/jquery-render-preview/blob/master/jquery.render-preview.js">jquery.render-preview.js</a> into the <tt class="docutils literal">head</tt> of your page:</p>
+<pre class="literal-block">&lt;head&gt;
+  &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.2/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;script src="/javascripts/jquery.render-preview.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;/head&gt;
+</pre>
+<p>Attach jQuery Render Preview to a <tt class="docutils literal">textarea</tt> or <tt class="docutils literal">input</tt> form field and pass in an identifier of a <tt class="docutils literal">div</tt> element where you'd like to display the output:</p>
+<pre class="literal-block">&lt;script language="javascript"&gt;
+  $(function() {
+    $('#source').renderPreview("#preview");
+  });
+&lt;/script&gt;
+</pre>
+<p>If you want to include custom options, such as your own white list of tags or custom filter,
+pass them in as options:</p>
+<pre class="literal-block">&lt;script language="javascript"&gt;
+  $(function() {
+    $('#source').renderPreview("#preview", {allowedTags: ['strong'], processor: customFilter});
+  });
+&lt;/script&gt;
+</pre>
+</div>
+
+<div class="section" id="basic-setup">
+  <a name="options"></a>
+  <h1>Options</h1>
+
+  <p>jQuery Render Preview takes several options:</p>
+
+  <p><tt class="docutils literal">paragraphRegExp</tt><br/>
+    Regular expression for inserting `p` tags in place of new lines.  Default:</p>
+<pre class="literal-block">new RegExp("(.*)\n\n([^#*\n\n].*)", "g")</pre>
+
+  <p><tt class="docutils literal">linkBreakRegExp</tt><br/>
+  Regular expression for inserting `br` tags in place of new lines.  Default:</p>
+<pre class="literal-block">new RegExp("(.*)\n([^#*\n].*)", "g")</pre>
+
+  <p><tt class="docutils literal">allowedTags</tt><br/>
+  Only tags in the allowed tag list will be rendered.  All others will be escaped. Default:</p>
+<pre class="literal-block">['a', 'b', 'img', 'strong', 'blockquote', 'p', 'i', 'em', 'u', 'strike', 'super', 'sub', 'code', 'span']</pre>
+
+  <p><tt class="docutils literal">processor</tt><br/>
+  A function reference for custom filtering of the input text. This is called after all other text filtering has been finished.</p>
+
+</div>
+
+<div class="section" id="basic-setup">
+  <a name="change"></a>
+  <h1>Changelog</h1>
+
+  <h3>0.1</h3>
+  <ul class="simple">
+    <li>Release</li>
+  </ul>
+
+
+</div>
+
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+    <script>
+      $(function() {
+        $('#source').renderPreview("#preview");
+      });
+    </script>
+
+  </body>
+</html>

@@ -8,7 +8,7 @@ callbacks to support additional formatting filters, like Markdown, or your own.
 Demo
 ----
 
-See a demo [here](http://mmayernick.github.com/jquery-render-preview/demo/)
+See a demo [here](http://mmayernick.github.com/jquery-render-preview/)
 
 Basic Setup
 -----------

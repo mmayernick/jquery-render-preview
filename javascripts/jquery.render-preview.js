@@ -36,12 +36,12 @@
     var self = this
 
     self.$el.live('input propertychange', function(e) {
-      var text = self.sanatize($(this).val());
+      var text = self.sanitize($(this).val());
       $(self.$target).html(text);
     });
   };
 
-  RenderPreview.prototype.sanatize = function(text) {
+  RenderPreview.prototype.sanitize = function(text) {
     var allowedTagsRegExp = new RegExp("&lt;(/?(" + this.opts.allowedTags.join("|") + ")(\\s+.*?)?)&gt;", "ig");
 
     if (text.length > 0) {

@@ -1,0 +1,36 @@
+{
+    "name": "render-preview",
+    "version": "0.1",
+    "title": "jQuery Render Preview",
+    "author": {
+        "name": "Michael Mayernick",
+        "url": "https://github.com/mmayernick"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/jquery/jquery-color/raw/2.0.0-beta.1/MIT-LICENSE.txt"
+        },
+        {
+            "type": "GPLv2",
+            "url": "https://github.com/jquery/jquery-color/raw/2.0.0-beta.1/GPL-LICENSE.txt"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.6"
+    },
+    "description": "jQuery Render Preview is a plugin that displays a sanatized, HTML formatted, live preview of the contents of a textarea or input. jQuery Render Preview supports custom HTML tag white lists, new line formats, paragraph formats. Additionally, jQuery Render Preview supports custom filter callbacks to support additional formatting filters, like Markdown, or your own.",
+    "keywords": [
+        "preview",
+        "sanitize",
+        "html",
+        "live"
+    ],
+    "homepage": "https://mmayernick.github.com/jquery-render-preview/",
+    "maintainers": [
+        {
+            "name": "Michael Mayernick",
+            "url": "https://github.com/mmayernick"
+        }
+    ]
+}
